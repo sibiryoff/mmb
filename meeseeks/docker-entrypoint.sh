@@ -30,11 +30,16 @@ export PG_USER="${PG_USER:="postgres"}"
 
 export BIRTHDAY_LOGGING_CHANNEL="${BIRTHDAY_LOGGING_CHANNEL:=""}"
 
+export CHECK_USERS_AVATAR="${CHECK_USERS_AVATAR:=""}"
+
 export CREATE_BIRTHDAY_CHANNELS="${CREATE_BIRTHDAY_CHANNELS:=""}"
 
 export COMPANY_NAME="${COMPANY_NAME:="CusDeb Solutions"}"
 
 export GREETINGS_RESPONSE="${GREETINGS_RESPONSE:="Welcome to ${COMPANY_NAME}!"}"
+
+export NOTIFY_SET_AVATAR="${NOTIFY_SET_AVATAR:="Oh, I see you didn't set avatar!
+Please, do it as soon as possible. :grin:"}"
 
 export NOTIFY_SET_BIRTH_DATE="${NOTIFY_SET_BIRTH_DATE:="Hmm…\nIt looks like you forgot to set the date of birth.\nPlease enter it (DD.MM.YYYY)."}"
 
