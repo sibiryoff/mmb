@@ -110,9 +110,9 @@ else
     mysql --user="${WG_DB_USER}" --host="${host}" --port="${port}" --password="${WG_DB_PASSWORD}" "${WG_DB_NAME}" < /var/www/w/maintenance/tables-generated.sql
 fi
 
->&2 echo "Executing maintenance/update.php"
-cd /var/www/w || exit 1
-php7 maintenance/update.php
+# >&2 echo "Executing maintenance/update.php"
+# cd /var/www/w || exit 1
+# php7 maintenance/update.php
 
 sed -i -e "s/PORT/${PORT}/" /etc/nginx/conf.d/default.conf
 
