@@ -43,12 +43,6 @@ services:
     - MYSQL_PASSWORD=
     volumes:
     - ./_db:/var/lib/mysql
-  mw_qserve:
-    image: sibiryoff/mwlib:latest
-    network_mode: "host"
-    environment:
-    - MW_QSERVE_PORT=${MW_QSERVE_PORT}
-    - TYPE=mw-qserve
   postman:
     image: sibiryoff/mwlib:latest
     network_mode: "host"
