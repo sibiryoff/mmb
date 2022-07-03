@@ -1,7 +1,7 @@
 version: "2"
 services:
   mediawiki:
-    image: cusdeb/mediawiki:1.35-amd64
+    image: sibiryoff/mediawiki:latest
     env_file:
       - ./.env
     environment:
@@ -42,24 +42,24 @@ services:
     volumes:
     - ./_db:/var/lib/mysql
   mw_qserve:
-    image: cusdeb/mwlib:0.16.2
+    image: sibiryoff/mwlib:latest
     network_mode: "host"
     environment:
     - MW_QSERVE_PORT=${MW_QSERVE_PORT}
     - TYPE=mw-qserve
   postman:
-    image: cusdeb/mwlib:0.16.2
+    image: sibiryoff/mwlib:latest
     network_mode: "host"
     environment:
     - TYPE=postman
   nserve:
-    image: cusdeb/mwlib:0.16.2
+    image: sibiryoff/mwlib:latest
     network_mode: "host"
     environment:
     - RENDER_SERVER_PORT=${RENDER_SERVER_PORT}
     - TYPE=nserve
   nslave:
-    image: cusdeb/mwlib:0.16.2
+    image: sibiryoff/mwlib:latest
     network_mode: "host"
     environment:
     - TYPE=nslave
