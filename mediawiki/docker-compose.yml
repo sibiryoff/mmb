@@ -31,11 +31,13 @@ services:
     - ./_deleted:/var/www/w/deleted
     - ./_images:/var/www/w/images
   mariadb:
-    image: cusdeb/mariadb:10.5-amd64
+    image: cusdeb/mariadb:10.1-amd64
     network_mode: "host"
+    env_file:
+      - ./.env
     environment:
     - MYSQLD_port=33061
-    - MYSQL_ROOT_PASSWORD=cusdeb
+    - MYSQL_ROOT_PASSWORD=
     - MYSQL_DATABASE=
     - MYSQL_USER=
     - MYSQL_PASSWORD=
